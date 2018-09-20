@@ -1,0 +1,42 @@
+<!--Contains HTML and text, mixed with Handlebars expressions.-->
+<!--Expressions tell Handlebars to...
+    include the value of variables
+    or to execute helper functions.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+    <script id="article-template" type="text/x-handlebars-template">
+        <div id="article-box">
+            <!--Contains the headline which holds the link URL-->
+            <div id="article-headline">{{Article.headline}}</div>
+            <div id="article-summary">{{Article.summary}}</div>
+        </div>
+    </script>
+
+    <!--Nav Bar-->
+    <!--Website Title and Pic-->
+
+    <!--Article Container-->
+
+    <!--Article is looked up on the global context, 
+    the one we pass to the compiled template-->
+    {{#each Article}}
+        <div id="articles-container">
+            <!--The context is each individual article-->
+            <p href="{{link}}" target="_blank">{{headline}}</p>
+            <p>{{summary}}</p>
+        </div>
+    {{/each}}
+    
+    <script src="handlebars-v2.0.0.js"></script>
+</body>
+</html>
