@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" src="assets/css/style.css">
+    <title>Toys, Not Boys!</title>
 </head>
 <body>
 
@@ -23,7 +24,25 @@
     </script>
 
     <!--Nav Bar-->
-    <!--Website Title and Pic-->
+    <ul class="navLinks" role="navigation">
+        <li><i class="fa fa-home"></i><a href="https://www.google.com">Home</a></li>
+        <li><i class="fas fa-heart"></i><a href="https://www.github.com">Saved</a></li>
+        <li><button><i class="fa fa-newspaper"></i>View New Articles</button></li>
+        <li><i class="fa fa-venus site-icon"></i></li>
+        <li><form><input placeholder="search articles"/><i class="fa fa-search"></i></form></li>
+        <!--<li><i class="fa fa-bell-o"></i>Notifications</li>-->
+        <!--<li><i class="fa fa-envelope-o"></i>Messages</li>-->
+        <!--<li><i class="fa fa-user-circle-o"></i></li>-->
+        <!--<li><button>Login</button></li>-->
+    </ul>
+
+    <!--Website Title and Img-->
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Toys, Not Boys!</h1> <!--Venus: Homo-genius-->
+            <h3>Sex Tech Review Forum</h3>
+        </div>
+    </div>
 
     <!--Article Container-->
 
@@ -37,6 +56,7 @@
         </div>
     {{/each}}
     
+    <script type="javascript" src="/assets/js/app.js"></script>
     <script src="handlebars-v2.0.0.js"></script>
 </body>
 </html>

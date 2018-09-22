@@ -1,3 +1,19 @@
+.flexLinks {
+    width: 100%;
+    display: flex;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.site-icon {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .jumbotron {
-    text-align: center
+    text-align: center;
+    background-color: rgb(199, 127, 247);
 }

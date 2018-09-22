@@ -89,12 +89,9 @@ app.set("view engine", "handlebars");
 // Html Routes
 
 // Homepage Route
-/*
 app.get("/", function(req, res) {
     res.render("index");
 });
-*/
-
 
 app.get("/scrape", function(req, res) {
 
@@ -135,7 +132,9 @@ app.get("/scrape", function(req, res) {
 });
 
 //View articles
-app.get("/articles", function(req, res) {
+app.get("/", function(req, res) {
+    res.render("index");
+
     db.Article.find({}).then(function(newArticle) {
         //console.log(newArticle);
         res.json(newArticle);

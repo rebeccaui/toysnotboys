@@ -25,14 +25,20 @@ var compiledArticle = articleTemplateCompiler(context);
 
 // On button click, the site displays 20 new scraped articles
 // sorted by date and time
+$("button").on("click", function() {
+    app.get("/scrape", function(req, res) {
+        
+    })
+    // Each scraped article will be saved to the app's db.
+        // If no duplicate articles...
+        //db.articles.insert({})
+
+    // On button click, the site saves the chosen article to saved db
+        // sorted by timestamp
+
+})
 $("#articles-container").append(compiledArticle);
 
-// Each scraped article will be saved to the app's db.
-    // If no duplicate articles...
-    //db.articles.insert({})
-
-// On button click, the site saves the chosen article to saved db
-    // sorted by timestamp
 
 
 
