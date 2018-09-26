@@ -10,8 +10,20 @@
 </head>
 <body>
     
+    <!--Nav Bar-->
 
+    <!--Website Title and Pic-->
 
+    <!--Article Container-->
+    <div id="article-container" class="container-fluid">
+            {{#each articleToSave}}
+                <form action="articleToSave/{{articleToSave._id}}" method="POST">
+                    <div class="input-group">
+                        <li class="form-control"></li>
+                    </div>
+                </form>
+            {{/each}}
+    </div>
 
     <script type="javascript" src="/public/assets/js/app.js"></script>
     <script src="handlebars-v2.0.0.js"></script>

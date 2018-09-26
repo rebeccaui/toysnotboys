@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Added a link to Style and font awesome-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" src="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> 
+    <!-- Added a link to JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/app.js"></script>
+    <!--<script type="javascript" src="/assets/js/index.js"></script>-->
+    <!-- Added a link to Bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
     <title>Toys, Not Boys!</title>
 </head>
 <body>
@@ -16,12 +25,15 @@
     <!--Website Title and Pic-->
 
     <!--Article Container-->
-    <div id="articles-container"></div>
-
-    {{#each Article}}
-    {{/each}}
+    <div id="article-container" class="container-fluid">
+        {{#each Article}}
+            <form action="Article/{{id}}" method="POST">
+                <div class="input-group">
+                    <li class="form-control"></li>
+                </div>
+            </form>
+        {{/each}}
+    </div>
     
-    <script type="javascript" src="/assets/js/app.js"></script>
-    <script src="handlebars-v2.0.0.js"></script>
 </body>
 </html>

@@ -127,14 +127,16 @@ app.get("/scrape", function(req, res) {
         });
         // Log the results once you've looped through each of the elements found with cheerio
         //console.log(results);
-        //res.json(results);
+        res.send(results);
     });
 });
 
-//View articles
-app.get("/", function(req, res) {
-    res.render("index");
+app.get("/saved", function(req,res) {
+    res.render("saved");
+})
 
+//View articles
+app.get("/articles", function(req, res) {
     db.Article.find({}).then(function(newArticle) {
         //console.log(newArticle);
         res.json(newArticle);
@@ -153,7 +155,7 @@ app.get("/articles/:id", function(req, res) {
     }).catch(function(err) {
         res.json(err);
     })
-})
+});
 
 
 /*
